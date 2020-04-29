@@ -1,14 +1,18 @@
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class FibonacciTest {
 
-  @Test
-  void should_return_1_when_calculate_given_1() {
+  @ParameterizedTest
+  @CsvSource({
+      "1, 1",
+      "1, 2"
+  })
+  void should_return_1_when_calculate_given_1(int result, int number) {
     Fibonacci fibonacci = new Fibonacci();
-    long result = fibonacci.calculate(1);
 
-    assertEquals(1, result);
+    assertEquals(result, fibonacci.calculate(number));
   }
 }

@@ -11,7 +11,8 @@ class FibonacciTest {
       "1, 2",
       "2, 3",
       "3, 4",
-      "5, 5"
+      "5, 5",
+      "8, 6"
   })
   void should_return_result_when_calculate_given_number(int result, int number) {
     Fibonacci fibonacci = new Fibonacci();

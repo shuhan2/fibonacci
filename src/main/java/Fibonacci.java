@@ -4,12 +4,14 @@ public class Fibonacci {
     if (number == 1 || number == 2) {
       return 1;
     }
-    if (number == 3) {
-      return 2;
+    int previousTwoNumber = 1;
+    int previousNumber = 1;
+    int result = 1;
+    for(int index = 3; index <= number; index ++) {
+      result = previousTwoNumber + previousNumber;
+      previousTwoNumber = previousNumber;
+      previousNumber = result;
     }
-    if (number == 4) {
-      return 3;
-    }
-    return 5;
+    return result;
   }
 }

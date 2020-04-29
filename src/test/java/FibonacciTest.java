@@ -8,7 +8,8 @@ class FibonacciTest {
   @ParameterizedTest
   @CsvSource({
       "1, 1",
-      "1, 2"
+      "1, 2",
+      "2, 3"
   })
   void should_return_1_when_calculate_given_1(int result, int number) {
     Fibonacci fibonacci = new Fibonacci();
